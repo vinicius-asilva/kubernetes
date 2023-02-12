@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbpsql
+  labels:
+    app: db
+spec:
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      volumes:
+        - name: dbstorage
+      containers:
+      - name: postgres
+        image: postgres:latest
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+
+         
