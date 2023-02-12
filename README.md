@@ -13,3 +13,6 @@ Cria um deployment postgress com armazenamento permanente
 2. kubectl apply -f persistentVolumeClaim.yml
 3. kubectl apply -f deploymentPostgres.yml
 
+
+
+
